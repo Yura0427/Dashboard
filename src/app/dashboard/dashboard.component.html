@@ -1,0 +1,16 @@
+<div cdkDropList cdkDropListOrientation="horizontal" class="example-list-horizontal" (cdkDropListDropped)="dropHorizontal($event)">
+    <div class="example-box-horizontal" *ngFor="let item of bloc1" cdkDrag>{{item}}</div>
+</div>
+<div cdkDropListGroup>
+    <div class="example-container">
+        <div cdkDropList [cdkDropListData]="bloc2" class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of bloc2" cdkDrag>{{item}}</div>
+        </div>
+    </div>
+
+    <div class="example-container">
+        <div cdkDropList [cdkDropListData]="bloc3" class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box" *ngFor="let item of bloc3" cdkDrag>{{item}}</div>
+        </div>
+    </div>
+</div>
